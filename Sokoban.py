@@ -95,9 +95,18 @@ def mover_caja(posicion_actual, nueva_posicion):
         return True
     return False
 
+def reset():
+    global mapa, posicion_jugador, posicion_caja
+    mapa = mapa.inicial.copy()
+    posicion_jugador = mapa.index(0)
+    posicion_caja = mapa.index(2)
+    
 imprimir_mapa()
 
 while True:
     tecla = msvcrt.getch()
-    mover_jugador(tecla)
-    imprimir_mapa()
+    if tecla = b'r':
+        reset()
+    else
+        mover_jugador(tecla)
+     imprimir_mapa()
