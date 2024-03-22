@@ -50,8 +50,11 @@ Programar un Sokoban ❤️
 | No. | Posibilidad | ¿Conseguido? |
 | --- | --- | --- |
 | 1. | Reiniciar el nivel | 🟢 |
-| 2. | Imprimir mappas variados | 🔴 |
+| 2. | Imprimir mapas variados | 🔴 |
 | 3. | Pingüino posee una habilidad especial | 🔴 |
-| 4. | El juego no pose errores que afecten la jugabilidad | 🔴 |
-
+| 4. | El juego no posee errores que afecten la jugabilidad | 🔴 |
+| 5. | Movimento hacia arriba | 🟢 |
+| 6. | Movimento hacia Abajo | 🟢 |
+| 7. | Movimento hacia la Derecha | 🟢 |
+| 8. | Movimento hacia la Izquierda | 🟢 |
 
