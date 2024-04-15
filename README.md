@@ -70,59 +70,60 @@ Programar un Sokoban ❤️
 
 ### ¿Qué se logro?
 | No. | Función | Sirve |
+| --- | --- | --- |
 | 0. | Cargar el siguiente nivel. | 🟢 |
 | 1. | Repetir el juego hasta terminar el nivel. | 🟢 |
 | 2. | Imprimir mapa.| 🟢 |
 | 3. | Leer el movimiento. | 🟢 Ulitize el msvcrt para que fuera de manera automatica |
 | 4. | Evaluar el movimiento del usuario. | 🟢 |
-| 5. | Personaje, espacio  | - | 
-| 6. | Personaje, meta  | - | 
-| 7. | Personaje, caja, espacio | - | 
-| 8. | Personaje, caja,  meta | - | 
-| 9. | Personaje, caja_meta, espacio | - | 
-| 10. |Personaje, caja_meta, meta | - | 
-| 11. | Personaje_meta, espacio | - | 
-| 12. | Personaje_meta, meta | - | 
-| 13. | Personaje_meta, caja, espacio | - | 
-| 14. | Personaje_meta, caja, meta | - |
-| 15. | Personaje_meta, caja_meta, espacio | - |
-| 16. | Personaje_meta, caja_meta, meta | - |
-| 17. | Personaje, espacio | - |
-| 18. | Personaje, meta | - | 
-| 19. | Personaje, caja, espacio | - | 
-| 20. | Personaje, caja, meta | - | 
-| 21. | Personaje, caja_meta, espacio | - | 
-| 22. | Personaje, caja_meta, meta | - | 
-| 23. | Personaje_meta, espacio | - | 
-| 24. | Personaje_meta, meta | - | 
-| 25. | Personaje_meta, caja, espacio | - |
-| 26. | Personaje_meta, caja, meta | - | 
-| 27. | Personaje_meta, caja_meta, espacio | - | 
-| 28. | Personaje_meta, caja_meta, meta | - | 
-| 29. | Personaje, espacio | - | 
-| 30. | Personaje, meta | - | 
-| 31. | Personaje, caja, espacio | - | 
-| 32. | Personaje, caja, meta | - | 
-| 33. | Personaje, caja_meta, espacio | - | 
-| 34. | Personaje, caja_meta, meta | - | 
-| 35. | Personaje_meta, espacio | - | 
-| 36. | Personaje_meta, meta | - | 
-| 37. | Personaje_meta, caja, espacio | - | 
-| 38. | Personaje_meta, caja, meta | - | 
-| 39. | Personaje_meta, caja_meta, espacio | - | 
-| 40. | Personaje_meta, caja_meta, meta | - | 
-| 41. | Personaje, espacio | - | 
-| 42. | Personaje, meta | - | 
-| 43. | Personaje, caja, espacio | - | 
-| 44. | Personaje, caja, meta | - | 
-| 45. | Personaje, caja_meta, espacio | - | 
-| 46. | Personaje, caja_meta, meta | - | 
-| 47. | Personaje_meta, espacio | - | 
-| 48. | Personaje_meta, meta | - | 
-| 49. | Personaje_meta, caja, espacio | - | 
-| 50. | Personaje_meta, caja, meta | - | 
-| 51. | Personaje_meta, caja_meta, espacio | - | 
-| 52. | Personaje_meta, caja_meta, meta | - | 
-| 53. | Evaluar si el nivel esta terminado (Esto sucede cuando todas las cajas estan sobre las metas), SI el nivel esta terminado cargar el siguiente nivel (Los niveles de juego estarán en archivos de texto independiente). | - | 
-| 54. | Reiniciar el mapa (Con la letra r, se vuelve a cargar el nivel que se esta jugando) | - | 
-| 55. | Función adicional o powerup (descripción). | - |
+| 5. | Personaje, espacio  |🟢 | 
+| 6. | Personaje, meta  | 🟢 | 
+| 7. | Personaje, caja, espacio | 🟢 | 
+| 8. | Personaje, caja,  meta | 🟢 | 
+| 9. | Personaje, caja_meta, espacio | 🟢 | 
+| 10. |Personaje, caja_meta, meta | 🟢 | 
+| 11. | Personaje_meta, espacio | 🟢 | 
+| 12. | Personaje_meta, meta | 🟢 | 
+| 13. | Personaje_meta, caja, espacio | 🟢 | 
+| 14. | Personaje_meta, caja, meta | 🟢 |
+| 15. | Personaje_meta, caja_meta, espacio | 🟢 |
+| 16. | Personaje_meta, caja_meta, meta | 🟢 |
+| 17. | Personaje, espacio | 🟢 |
+| 18. | Personaje, meta | 🟢 | 
+| 19. | Personaje, caja, espacio | 🟢 | 
+| 20. | Personaje, caja, meta | 🟢 | 
+| 21. | Personaje, caja_meta, espacio | 🟢 | 
+| 22. | Personaje, caja_meta, meta | 🟢 | 
+| 23. | Personaje_meta, espacio | 🟢 | 
+| 24. | Personaje_meta, meta | 🟢 | 
+| 25. | Personaje_meta, caja, espacio | 🟢 |
+| 26. | Personaje_meta, caja, meta | 🟢 | 
+| 27. | Personaje_meta, caja_meta, espacio | 🟢 | 
+| 28. | Personaje_meta, caja_meta, meta | 🟢 | 
+| 29. | Personaje, espacio | 🟢 | 
+| 30. | Personaje, meta | 🟢 | 
+| 31. | Personaje, caja, espacio | 🟢 | 
+| 32. | Personaje, caja, meta | 🟢 | 
+| 33. | Personaje, caja_meta, espacio | 🟢 | 
+| 34. | Personaje, caja_meta, meta | 🟢 | 
+| 35. | Personaje_meta, espacio | 🟢 | 
+| 36. | Personaje_meta, meta | 🟢 | 
+| 37. | Personaje_meta, caja, espacio | 🟢 | 
+| 38. | Personaje_meta, caja, meta | 🟢 | 
+| 39. | Personaje_meta, caja_meta, espacio | 🟢 | 
+| 40. | Personaje_meta, caja_meta, meta | 🟢 | 
+| 41. | Personaje, espacio | 🟢 | 
+| 42. | Personaje, meta | 🟢 | 
+| 43. | Personaje, caja, espacio | 🟢 | 
+| 44. | Personaje, caja, meta | 🟢 | 
+| 45. | Personaje, caja_meta, espacio | 🟢 | 
+| 46. | Personaje, caja_meta, meta | 🟢 | 
+| 47. | Personaje_meta, espacio | 🟢 | 
+| 48. | Personaje_meta, meta | 🟢 | 
+| 49. | Personaje_meta, caja, espacio | 🟢 | 
+| 50. | Personaje_meta, caja, meta | 🟢 | 
+| 51. | Personaje_meta, caja_meta, espacio | 🟢 | 
+| 52. | Personaje_meta, caja_meta, meta | 🟢 | 
+| 53. | Evaluar si el nivel esta terminado (Esto sucede cuando todas las cajas estan sobre las metas), SI el nivel esta terminado cargar el siguiente nivel (Los niveles de juego estarán en archivos de texto independiente). | 🟢 | 
+| 54. | Reiniciar el mapa (Con la letra r, se vuelve a cargar el nivel que se esta jugando) | 🟢 | 
+| 55. | Función adicional o powerup (Crear metas+). | 🟢 |
