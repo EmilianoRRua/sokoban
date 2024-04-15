@@ -1,15 +1,52 @@
 import msvcrt
 
-mapa_inicial = [
-    1, 1, 1, 1, 1, 1, 1, 1,
-    1, 3, 3, 3, 3, 3, 3, 1,
-    1, 3, 3, 3, 0, 3, 3, 1,
-    1, 3, 3, 3, 3, 3, 3, 1,
-    1, 3, 3, 3, 3, 3, 3, 1,
-    1, 5, 3, 3, 3, 2, 3, 1,
-    1, 3, 3, 3, 3, 3, 3, 1,
-    1, 1, 1, 1, 1, 1, 1, 1,
+# Definimos los niveles
+niveles = [
+    [
+        1, 1, 1, 1, 1, 1, 1, 1,
+        1, 3, 3, 3, 3, 3, 3, 1,
+        1, 3, 3, 3, 0, 3, 3, 1,
+        1, 3, 3, 3, 3, 3, 3, 1,
+        1, 3, 3, 3, 3, 3, 3, 1,
+        1, 5, 3, 3, 3, 2, 3, 1,
+        1, 3, 3, 3, 3, 3, 3, 1,
+        1, 1, 1, 1, 1, 1, 1, 1,
+    ],
+    [
+        1, 1, 1, 1, 1, 1, 1, 1,
+        1, 3, 3, 3, 3, 1, 5, 1,
+        1, 3, 3, 3, 3, 1, 5, 1,
+        1, 3, 2, 1, 3, 1, 3, 1,
+        1, 3, 3, 1, 3, 1, 3, 1,
+        1, 3, 2, 3, 3, 3, 3, 1,
+        1, 0, 3, 1, 3, 3, 3, 1,
+        1, 1, 1, 1, 1, 1, 1, 1,   
+    ],    
+        [
+        1, 1, 1, 1, 1, 1, 1, 1,
+        1, 3, 3, 3, 3, 3, 0, 1,
+        1, 3, 2, 2, 3, 3, 3, 1,
+        1, 3, 3, 1, 1, 3, 1, 1,
+        1, 3, 3, 3, 3, 3, 3, 1,
+        1, 1, 1, 1, 1, 3, 3, 1,
+        1, 5, 3, 3, 3, 3, 3, 1,
+        1, 1, 1, 1, 1, 1, 1, 1,
+    ],
+    [
+        1, 1, 1, 1, 1, 1, 1, 1,
+        1, 3, 3, 3, 3, 3, 3, 1,
+        1, 3, 2, 2, 3, 2, 3, 1,
+        1, 3, 3, 3, 3, 3, 3, 1,
+        1, 3, 1, 1, 3, 3, 3, 1,
+        1, 5, 5, 3, 3, 2, 3, 1,
+        1, 5, 1, 1, 3, 0, 3, 1,
+        1, 1, 1, 1, 1, 1, 1, 1,   
+    ],
 ]
+
+# Inicializamos el nivel actual
+nivel_actual = 0
+mapa_inicial = niveles[nivel_actual]
 
 filas = 8
 columnas = 8
@@ -38,8 +75,8 @@ def imprimir_mapa():
             elif mapa[indice] == 7:             # JUGADOR SOBRE META
                 print(" 🐧 ", end="")
         print()
-# nueva_posicion: sera nuestro siguiente movimiento es decir que el jugador se movera hacia ese bloque
-# posicion_jugador: sera la posicion actual en el tablero
+
+movimientos = []
 
 def mover_jugador(direccion):
     global posicion_jugador
@@ -51,7 +88,7 @@ def mover_jugador(direccion):
         nueva_posicion = posicion_jugador - 1
     elif direccion == b'd':  # Derecha
         nueva_posicion = posicion_jugador + 1
-
+    movimientos.append(mapa[:])
     if mapa[nueva_posicion] in [3, 5]:  # Si el jugador se moverá a un espacio vacío o a una meta
         if mapa[posicion_jugador] == 7:  # Si el jugador está sobre la meta
             mapa[posicion_jugador] = 5  # Deja la meta
@@ -85,8 +122,10 @@ def mover_jugador(direccion):
             else:
                 mapa[nueva_posicion_caja] = 2  # Mueve la caja
             posicion_jugador = nueva_posicion
-            
-            
+        elif tecla == b'q':  # Habilidad especial
+            if mapa[posicion_jugador] == 0:  # Si el jugador está en un espacio vacío
+             mapa[posicion_jugador] = 7  # Coloca al jugador sobre una meta
+
 def mover_caja(posicion_actual, nueva_posicion):
     if mapa[nueva_posicion] in [3, 5]:  # Si la nueva posición es un espacio vacío o una meta
         return True
@@ -94,25 +133,41 @@ def mover_caja(posicion_actual, nueva_posicion):
         return False
 
 def fin_del_juego():
+    global nivel_actual
     if 2 not in mapa:  # ¿No hay Metas?
         print("Fin del Juego")
+        # Avanza al siguiente nivel
+        nivel_actual += 1
+        if nivel_actual < len(niveles):  # Si hay más niveles
+            reiniciar_nivel()  # Inicia el siguiente nivel
 
-    
+
+
 def reiniciar_nivel():
-    global mapa, posicion_jugador, posicion_caja
-    mapa = mapa_inicial.copy()
+    global mapa, posicion_jugador, posicion_caja, nivel_actual
+    mapa = niveles[nivel_actual].copy()
     posicion_jugador = mapa.index(0)
     posicion_caja = mapa.index(2)
-
 imprimir_mapa()
+
+
 
 while True:
     tecla = msvcrt.getch()
     if tecla == b'r':
         reiniciar_nivel()
-    elif 5 not in mapa:  # ¿No hay Metas?
-        print("Fin del Juego | Usa r Para reiniciar")
-    
+    elif tecla == b'q':  # Habilidad especial
+        if mapa[posicion_jugador] in [0, 3]:  # Si el jugador está en un espacio vacío o sobre una meta
+            mapa[posicion_jugador] = 7  # Transforma al jugador en jugador-meta
+    elif tecla == b'z':  # Retrocede
+        if movimientos:  # Si hay movimientos para retroceder
+            # Restaura el estado completo del mapa al estado anterior
+            mapa = movimientos.pop()
+            # Actualiza la posición del jugador y de la caja
+            posicion_jugador = mapa.index(0)
+            posicion_caja = mapa.index(2)
+    elif 2 not in mapa:  # ¿No hay Metas?
+        fin_del_juego()  
     else:
         mover_jugador(tecla)
     imprimir_mapa()
