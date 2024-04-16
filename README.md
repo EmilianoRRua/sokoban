@@ -21,7 +21,7 @@ Programar un Sokoban ❤️
 - ¿El Jugador se puede mover en cuatro direcciones? 🟢
 - ¿El jugador solo puede empujar una caja? 🟢
 - ¿El jugador se puede mover sobre la meta? 🟢 
-- ¿El jugador puede empujar la caja sobre la meta y sacarla de la meta? 🟢 "Puede empujar la caja sobre la meta" 🟡 "al sacarla La meta desaparece"
+- ¿El jugador puede empujar la caja sobre la meta y sacarla de la meta? 🟢 "Puede empujar la caja sobre la meta" 🟢 "al sacarla La meta desaparece"
 - ¿El juego termina? 🟢
 - ¿Hay muchos niveles? 🟢
 - ¿Existe dificultad en el juego? 🟢
