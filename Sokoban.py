@@ -1,6 +1,5 @@
 import msvcrt
 
-# Definimos los niveles
 niveles = [
     [
         1, 1, 1, 1, 1, 1, 1, 1,
@@ -42,9 +41,9 @@ niveles = [
         1, 5, 1, 1, 3, 0, 3, 1,
         1, 1, 1, 1, 1, 1, 1, 1,   
     ],
-]
+] # Niveles variados
 
-# Inicializamos el nivel actual
+# 1er Nivel
 nivel_actual = 0
 mapa_inicial = niveles[nivel_actual]
 
